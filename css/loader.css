@@ -1,4 +1,6 @@
 .loader {
+    margin: 0px;
+    padding: 0px;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -29,7 +31,7 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 12px;
-    top: 36px;
+    top: 30px;
     animation: rotateLoader linear 500ms infinite;
     border-radius: 50%;
     border-top: solid 2px #1b262c;
@@ -40,7 +42,16 @@
 
 .loader img {
     position: relative;
-    top: -36px;
+    top: -30px;
+}
+
+.loader span::before { 
+    content: "";
+}
+
+.loader span::after {
+    content: "";
+    animation: dots 1s linear infinite;
 }
 
 @keyframes rotateLoader {
@@ -91,11 +102,3 @@
     }
 }
 
-.loader span::before { 
-    content: "";
-}
-
-.loader span::after {
-    content: "";
-    animation: dots 1s linear infinite;
-}
